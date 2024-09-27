@@ -19,7 +19,7 @@ This project is a simple TTS converter built using Vite and vanilla JavaScript.
    ```
 2. **Navigate to the project directory:**
    ```bash
-   cd ip-lens
+   cd tts
    ```
 3. **Install dependencies:**
    ```bash
