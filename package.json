@@ -1,0 +1,21 @@
+{
+  "homepage": "https://u22099.github.io/TTS",
+  "name": "tts",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "generate-pwa-assets": "pwa-assets-generator --preset minimal-2023 public/logo.jpg"
+  },
+  "devDependencies": {
+    "vite": "^5.4.1"
+  },
+  "dependencies": {
+    "gh-pages": "^6.1.1",
+    "simple-notify": "^1.0.4",
+    "vite-plugin-pwa": "^0.20.5"
+  }
+}
