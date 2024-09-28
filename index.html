@@ -11,55 +11,59 @@
     <title>Text To Speech</title>
   </head>
   <body>
-    <div id="app">
-      <header>
-        <h2 class="hours">:</h2>
-        <h2 class="mins">:</h2>
-        <h2 class="second"></h2>
-      </header>
-      <main class="heroSection">
-        <section class="section1">
-          <h1>Text To <span>Speech</span> Converter</h1>
-          <textarea name="" id="" placeholder="Write anything here"></textarea> <br /><br />
-        </section>
-        <section class="inputOptions">
-          <p class="vType">Voice Type:
-            <input type="radio" id="male">
-            <label for="male">Male</label>
-            <input type="radio" id="female">
-            <label for="female">Female</label>
-          </p>
-          
-
-          <p class="vRate">Voice Rate:
-            <input type="radio" id="low">
-            <label for="low">Low</label>
-            <input type="radio" id="medium">
-            <label for="medium">Medium</label>
-            <input type="radio" id="high">
-            <label for="high">High</label>
-          </p>
-          
-          <p class="vVolume">Voice Volume:
-            <input type="range">
-          </p>
-
-          <p class="vLang">Select Language:
-            <select name="" id="">
-              <option value="">English</option>
-              <option value="">French</option>
-              <option value="">Spanish</option>
-              <option value="">Italian</option>
-              <option value="">Portuguese</option>
-              <option value="">Pidgin</option>
-            </select>
-          </p>
-
-          <button class="playBtn">Play</button>
-        </section>
+    <header>
+      <span class="hours">00:</span>
+      <span class="mins">00:</span>
+      <span class="second">00</span>
+    </header>
+    <main class="main">
+      <section class="head">
+        <h1>Text To <span>Speech</span> Converter</h1>
+        <textarea name="" id="" placeholder="Write anything here"></textarea> <br /><br />
+      </section>
+      <section class="body">
+        <p class="voices">Voice Type:
+          <input type="radio" id="male" name="voice">
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="voice">
+          <label for="female">Female</label>
+        </p>
         
-      </main>
-    </div>
+
+        <p class="rate">Voice Rate:
+          <input type="radio" id="low" name="rate">
+          <label for="low">Low</label>
+          <input type="radio" id="medium" name="rate">
+          <label for="medium">Medium</label>
+          <input type="radio" id="high" name="rate">
+          <label for="high">High</label>
+        </p>
+        
+        <p class="volume">Voice Volume:
+          <input type="range" min="0" max="1">
+        </p>
+
+        <p class="language">Select Language:
+          <select name="" id="">
+            <option value="en-US">English</option>
+            <option value="fr-FR">French</option>
+            <option value="es-Es">Spanish</option>
+            <option value="it-IT">Italian</option>
+            <option value="">Portuguese</option>
+          </select>
+        </p>
+        <button class="btn">Speak</button>
+      </section>
+      <footer>
+        <section>
+          <h1>Note:</h1>
+          <span>The voice type and voice language depends on your phone and region</span>
+        </section>
+        <section>
+          <p>developed by MaryJane, Marcel, Seyi, Muiz and Daniel</p>
+        </section>
+      </footer>
+    </main>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
