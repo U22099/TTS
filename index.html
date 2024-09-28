@@ -12,6 +12,54 @@
     <link rel="stylesheet" crossorigin href="/TTS/assets/index-B_SY1GJM.css">
   <link rel="manifest" href="/TTS/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/TTS/registerSW.js"></script></head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <header>
+        <h2 class="hours">:</h2>
+        <h2 class="mins">:</h2>
+        <h2 class="second"></h2>
+      </header>
+      <main class="heroSection">
+        <section class="section1">
+          <h1>Text To <span>Speech</span> Converter</h1>
+          <textarea name="" id="" placeholder="Write anything here"></textarea> <br /><br />
+        </section>
+        <section class="inputOptions">
+          <p class="vType">Voice Type:
+            <input type="radio" id="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female">
+            <label for="female">Female</label>
+          </p>
+          
+
+          <p class="vRate">Voice Rate:
+            <input type="radio" id="low">
+            <label for="low">Low</label>
+            <input type="radio" id="medium">
+            <label for="medium">Medium</label>
+            <input type="radio" id="high">
+            <label for="high">High</label>
+          </p>
+          
+          <p class="vVolume">Voice Volume:
+            <input type="range">
+          </p>
+
+          <p class="vLang">Select Language:
+            <select name="" id="">
+              <option value="">English</option>
+              <option value="">French</option>
+              <option value="">Spanish</option>
+              <option value="">Italian</option>
+              <option value="">Portuguese</option>
+              <option value="">Pidgin</option>
+            </select>
+          </p>
+
+          <button class="playBtn">Play</button>
+        </section>
+        
+      </main>
+    </div>
   </body>
 </html>
