@@ -22,7 +22,7 @@
         <textarea name="" id="" placeholder="Write anything here"></textarea> <br /><br />
       </section>
       <section class="body">
-        <p class="voices">Voice Type:
+        <p class="voices">Voice Gender:
           <input type="radio" id="male" name="voice">
           <label for="male">Male</label>
           <input type="radio" id="female" name="voice">
@@ -31,16 +31,22 @@
         
 
         <p class="rate">Voice Rate:
-          <input type="radio" id="low" name="rate">
-          <label for="low">Low</label>
+          <input type="radio" id="slow" name="rate">
+          <label for="low">Slow</label>
+          <input type="radio" id="mslow" name="rate">
+          <label for="medium">Medium-Slow</label>
           <input type="radio" id="medium" name="rate">
           <label for="medium">Medium</label>
-          <input type="radio" id="high" name="rate">
-          <label for="high">High</label>
+          <input type="radio" id="mfast" name="rate">
+          <label for="medium">Medium-Fast</label>
+          <input type="radio" id="fast" name="rate">
+          <label for="high">Fast</label>
+          <input type="radio" id="vfast" name="rate">
+          <label for="medium">Very-Fast</label>
         </p>
         
         <p class="volume">Voice Volume:
-          <input type="range" min="0" max="1">
+          <input type="range" min="1" value="80" max="100">
         </p>
 
         <p class="language">Select Language:
@@ -52,7 +58,7 @@
             <option value="">Portuguese</option>
           </select>
         </p>
-        <button class="btn">Speak</button>
+        <button id="btn" class="btn">Speak</button>
       </section>
       <footer>
         <section>
@@ -64,6 +70,7 @@
         </section>
       </footer>
     </main>
+    <script type="module" src="/script/model/speech.js" defer></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
