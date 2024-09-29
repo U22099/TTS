@@ -9,7 +9,6 @@
     box-sizing: border-box;
 }
 html{
-    border: 1px solid purple;
     width: 800px;
     margin: auto;
     padding: auto;
@@ -24,8 +23,7 @@ html{
 
 /* \\ GENERAL STYLES */
 header{
-    margin: 2em;
-    margin-left: 12em;
+    margin: 2em auto;
     text-align: center;
     border: 2px solid purple;
     padding: 1rem;
@@ -90,26 +88,63 @@ header span {
     color: var(--FONT-COLOR);
     font-family:"Sofadi One";
 }
+input[type="radio"]{
+  appearance: none;
+  border-radius: 50%;
+  border: 2px solid purple;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+input[type="radio"]:checked{
+  background: purple;
+}
 .rate,
 .volume{
     padding: 1rem;
     color: var(--FONT-COLOR);
     font-size: clamp(1em, 1.2em, 2em);
 }
+.volume input{
+  appearance: none;
+  border-radius: 10px;
+  background: none;
+  height: fit-content;
+  border: 2px solid purple;
+  cursor: pointer;
+}
+.volume input::-webkit-slider-thumb{
+  appearance: none;
+  background: purple;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
 .language select{ 
-    padding: 0.5em;
-    color: var(--FONT-COLOR);
-    font-size: clamp(1em, 1.2em, 2em);
+    padding: 5px;
     margin-bottom: 1rem;
+    background: none;
+    border-radius: 5px;
+    border: 2px solid purple;
+    cursor: pointer;
+}
+.language select:focus, .language select:focus-visible{
+  color: black;
 }
 .language{
     color: var(--FONT-COLOR);
     font-size: clamp(1em, 1.2em, 2em);
 }
 .btn{
-   padding: 1em; 
-   width: 50%;
+   padding: 10px; 
+   width: clamp(70%, 60%, 30%);
    margin-bottom: 1rem;
+   border-radius: 10px;
+   background: none;
+   border: 2px solid purple;
+   cursor: pointer;
+   font-size: clamp(1em, 1.2em, 1.5em);
 }
 
 .output{
@@ -146,10 +181,7 @@ footer{
         background-color: black;
         color: black;
     }
-    .head > textarea{
-      color: white;
-    }
-    .output{
+    .head > textarea, .output, .btn, .language select{
       color: white;
     }
 }
