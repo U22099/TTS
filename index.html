@@ -1,4 +1,4 @@
-<!doctype html>
+  <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,59 +8,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="A text to speech converter using web speech syntesis creates by a team of five as a demo project, The team includes MaryJane, Marcel, Muiz, Seyi and Daniel"/>
     <title>Text To Speech</title>
-    <script type="module" crossorigin src="/TTS/assets/index-C0mXym3f.js"></script>
-    <link rel="stylesheet" crossorigin href="/TTS/assets/index-B_SY1GJM.css">
+    <script type="module" crossorigin src="/TTS/assets/index-B0Pq71_S.js"></script>
+    <link rel="stylesheet" crossorigin href="/TTS/assets/index-DcN7fz9I.css">
   <link rel="manifest" href="/TTS/manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="/TTS/registerSW.js"></script></head>
   <body>
     <header>
-      <span class="hours">00:</span>
-      <span class="mins">00:</span>
-      <span class="second">00</span>
-      <span class="meridian">&nbsp;AM</span>
+      <span id="hr" class="hours">00</span>
+      <span>:</span>
+      <span id="m" class="mins">00</span>
+      <span>:</span>
+      <span id="s" class="second">00</span>
+      <span>&nbsp;</span>
+      <span id="md" class="meridian">AM</span>
     </header>
     <main class="main">
       <section class="head">
         <h1>Text To <span>Speech</span> Converter</h1>
-        <textarea name="" id="" placeholder="Write anything here"></textarea> <br /><br />
+        <textarea name="input" id="input" placeholder="Write anything here"></textarea> <br /><br />
       </section>
       <section class="body">
         <p class="voices">Voice Gender:
-          <input type="radio" id="male" name="voice">
+          <input type="radio" id="male" name="gender" value="male">
           <label for="male">Male</label>
-          <input type="radio" id="female" name="voice">
+          <input type="radio" id="female" name="gender" value="female">
           <label for="female">Female</label>
         </p>
         
 
         <p class="rate">Voice Rate:
-          <input type="radio" id="slow" name="rate">
-          <label for="low">Slow</label>
-          <input type="radio" id="mslow" name="rate">
-          <label for="medium">Medium-Slow</label>
-          <input type="radio" id="medium" name="rate">
+          <input type="radio" id="slow" name="rate" value="slow">
+          <label for="slow">Slow</label>
+          <input type="radio" id="mslow" name="rate" value="mslow">
+          <label for="mslow">Medium-Slow</label>
+          <input type="radio" id="medium" name="rate" value="medium">
           <label for="medium">Medium</label>
-          <input type="radio" id="mfast" name="rate">
-          <label for="medium">Medium-Fast</label>
-          <input type="radio" id="fast" name="rate">
-          <label for="high">Fast</label>
-          <input type="radio" id="vfast" name="rate">
-          <label for="medium">Very-Fast</label>
+          <input type="radio" id="mfast" name="rate" value="mfast">
+          <label for="mfast">Medium-Fast</label>
+          <input type="radio" id="fast" name="rate" value="fast">
+          <label for="fast">Fast</label>
+          <input type="radio" id="vfast" name="rate" value="vfast">
+          <label for="vfast">Very-Fast</label>
         </p>
         
         <p class="volume">Voice Volume:
-          <input type="range" min="1" value="80" max="100">
+          <input type="range" min="1" value="80" max="100" id="volume">
         </p>
 
         <p class="language">Select Language:
-          <select name="" id="">
-            <option value="en-US">English</option>
-            <option value="fr-FR">French</option>
-            <option value="es-Es">Spanish</option>
-            <option value="it-IT">Italian</option>
-            <option value="">Portuguese</option>
+          <select name="lang" id="lang">
+            <option value="en" selected>English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+            <option value="it">Italian</option>
+            <option value="pt">Portuguese</option>
           </select>
         </p>
-        <button class="btn">Speak</button>
+        <button id="btn" class="btn">Speak</button>
+      </section>
+      <section>
+        <p id="output">Output</p>
       </section>
       <footer>
         <section>
