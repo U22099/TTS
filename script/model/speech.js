@@ -1,5 +1,4 @@
 export default function Speech(text, options){
-  console.log("Start");
   if(!text || !options){
     return false;
   }

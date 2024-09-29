@@ -3,7 +3,7 @@ export default class Controller{
   constructor(model, view){
     this.model = model;
     this.view = view;
-    this.btn = document.getElementById("btn");
+    this.btn = this.view.runGetElement("btn");
   }
   
   init(){
@@ -48,6 +48,7 @@ export default class Controller{
       textStream = utterance.text
       this.stream(textStream);
     };
+    this.view.runGetElement("output").scrollIntoView({behaviour: "smooth"});
   }
   
   stream(text){
