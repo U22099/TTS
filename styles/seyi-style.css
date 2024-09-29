@@ -1,1 +1,94 @@
 /*Seyi's StyleSheet*/
+body{
+  background-image:linear-gradient(
+    50deg, rgb(10, 10, 68) 40%, rgb(22, 83, 119)
+  );
+  padding-bottom:800px;
+}
+header{
+  background-color:rgb(199, 197, 197);
+  width:110px;
+  border-top-right-radius:10px;
+  border-bottom-right-radius: 10px;
+  position:fixed;
+  top:20px;
+  left:0;
+  height:40px;
+  font-size:1.5em;
+  font-weight:bold;
+  padding-top:7px;
+  padding-left:3px;
+  padding-right:3px;
+  
+}
+.main{
+background-color:rgba(0, 76, 216, 0.7);
+min-width: 100px;
+max-width:600px;
+height:600px;
+border-radius:12px;
+margin:auto;
+position:absolute;
+top:80px;
+right:50px;
+left:50px;
+display:flex;
+flex-direction: column;
+justify-content:center;
+align-items:center;
+font-family:Tahoma, Arial,Sans-serif;
+}
+footer{
+  text-align:center;
+  margin-bottom:0;
+  margin-top:19px;
+  padding:20px;
+  border-top:3px solid gray;
+  width:80%;
+}
+
+}
+section p:last-of-type{
+  color:rgb(192, 144, 236);
+  font-size:0.8em;
+  font-style:italic;
+  margin-bottom:0;
+  margin-top:30px;
+}
+.head{
+  text-align:center;
+  margin-top:10px;
+  color:rgb(206, 206, 206);
+  font-size:1.2rem;
+  margin-bottom:10px;
+}
+textarea{
+  width:70%;
+  height:50px;
+}
+.body{
+  margin-top:0;
+  margin-bottom:28px;
+  font-size:0.8rem;
+  margin-right:95px;
+  color:rgb(255, 255, 255)
+}
+button{
+  background-color:rgb(132, 184, 204);
+  width:50%;
+  height:30px;
+  border-radius:15px;
+  border:none;
+  margin-top:20px;
+  
+  margin-bottom:0;
+  
+  font-size:1.5em;
+}
+button:hover{
+  cursor:pointer;
+  opacity:0.8;
+}
+button:active{
+  color:white;
+}
