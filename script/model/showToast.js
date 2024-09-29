@@ -7,7 +7,7 @@ export default function showToast(status, title, text) {
     status,
     title,
     text,
-    effect: "fade",
+    effect: "slide",
     speed: 300,
     showIcon: true,
     showCloseButton: true,

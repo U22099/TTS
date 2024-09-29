@@ -12,8 +12,10 @@
   </head>
   <body>
     <header>
-      <span id="hr" class="hours">00:</span>
-      <span id="m" class="mins">00:</span>
+      <span id="hr" class="hours">00</span>
+      <span>:</span>
+      <span id="m" class="mins">00</span>
+      <span>:</span>
       <span id="s" class="second">00</span>
       <span>&nbsp;</span>
       <span id="md" class="meridian">AM</span>
@@ -25,26 +27,26 @@
       </section>
       <section class="body">
         <p class="voices">Voice Gender:
-          <input type="radio" id="male" name="voice">
+          <input type="radio" id="male" name="gender" value="male">
           <label for="male">Male</label>
-          <input type="radio" id="female" name="voice">
+          <input type="radio" id="female" name="gender" value="female">
           <label for="female">Female</label>
         </p>
         
 
         <p class="rate">Voice Rate:
-          <input type="radio" id="slow" name="rate">
-          <label for="low">Slow</label>
-          <input type="radio" id="mslow" name="rate">
-          <label for="medium">Medium-Slow</label>
-          <input type="radio" id="medium" name="rate">
+          <input type="radio" id="slow" name="rate" value="slow">
+          <label for="slow">Slow</label>
+          <input type="radio" id="mslow" name="rate" value="mslow">
+          <label for="mslow">Medium-Slow</label>
+          <input type="radio" id="medium" name="rate" value="medium">
           <label for="medium">Medium</label>
-          <input type="radio" id="mfast" name="rate">
-          <label for="medium">Medium-Fast</label>
-          <input type="radio" id="fast" name="rate">
-          <label for="high">Fast</label>
-          <input type="radio" id="vfast" name="rate">
-          <label for="medium">Very-Fast</label>
+          <input type="radio" id="mfast" name="rate" value="mfast">
+          <label for="mfast">Medium-Fast</label>
+          <input type="radio" id="fast" name="rate" value="fast">
+          <label for="fast">Fast</label>
+          <input type="radio" id="vfast" name="rate" value="vfast">
+          <label for="vfast">Very-Fast</label>
         </p>
         
         <p class="volume">Voice Volume:

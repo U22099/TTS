@@ -6,12 +6,12 @@ export default class Controller{
     setInterval(() => {
         this.showTime();
     }, 1000);
-    this.btn = document.getElementById("btn").addEventListener("click", () => this.run());
+    this.btn = document.getElementById("btn");
+    this.btn.addEventListener("click", () => this.run());
   }
   
   showTime(){
     const { hour, min, sec, meridian } = this.model.runTime();
-    console.log(hour)
     this.view.runWriteToDOM("hr", hour);
     this.view.runWriteToDOM("m", min);
     this.view.runWriteToDOM("s", sec);
@@ -30,6 +30,7 @@ export default class Controller{
     const lang = this.view.runGetFromDOM("lang", true);
     const volume = this.view.runGetFromDOM("volume");
     const rate = this.view.runGetFromDOM("rate");
+    console.log(text, gender, lang, volume, rate)
     return { text, options: {
       gender, lang, volume, rate
     } }

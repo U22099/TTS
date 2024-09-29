@@ -1,5 +1,8 @@
 export default function Speech(text, options){
   console.log("Start");
+  if(!text || !options){
+    return false;
+  }
   //Uses object destructuring to destructure ths options properties
   const {
     gender,
@@ -41,6 +44,7 @@ export default function Speech(text, options){
 }
 
 function getVoices(gender, lang, speech){
+  if(!speech.getVoices()) return false;
   //Gets voices and filter according to gender and lang input returning the result
   return speech.getVoices().filter(x => ((x.gender === gender&&x.lang === lang) || x.gender === gender || x.lang === lang || x.name.includes(gender.toUpperCase())))[0];
 }

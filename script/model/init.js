@@ -3,7 +3,7 @@ import Speech from "./speech.js";
 import showToast from "./showToast.js";
 
 export default class Model{
-  contructor(){
+  constructor(){
     this.prevSpeech = null;
   }
   runTime(){
@@ -16,7 +16,7 @@ export default class Model{
     rate: "medium",
     prevSpeech: this.prevSpeech
   }){
-    const object = Speech(text, options);
+    const object = Speech(text, options) || {prevSpeech: false, utterance: false};
     this.prevSpeech = object.prevSpeech;
     if(!this.prevSpeech){
       showToast("error", "Error", "An error occured, please try again");
