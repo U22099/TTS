@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    animation: borderGlow  10s ease infinite;
 }
 html{
     width: 800px;
@@ -32,7 +33,6 @@ header{
     border-radius: 15px;
     left: -30px;
     background: none;
-    animation: borderGlow  .8s infinite;
     transition: transform .5s ease-in;
 }
 header:hover,
@@ -65,7 +65,6 @@ header span {
     padding: 10px;
     background: none;
     font-size: clamp(1em, 1.2em, 2em);
-    animation: borderGlow  .8s infinite;
     transition: transform ease-in .5s;
 }
 .head > textarea::placeholder{
@@ -170,9 +169,14 @@ footer{
 
 /* \\ KEYFRAMES ANIMATIONS */
 @keyframes borderGlow {
-    100%{
-      filter: hue-rotate(360degs);
-    }
+  0% {
+    filter: hue-rotate(0deg);
+    border-color: #ff0000;
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    border-color: #0000ff;
+  }
 }
 
 /* || MEDIA QUERIES */
