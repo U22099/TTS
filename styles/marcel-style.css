@@ -9,7 +9,7 @@
     box-sizing: border-box;
 }
 html{
-    border: 1px solid gray;
+    border: 1px solid purple;
     width: 800px;
     margin: auto;
     padding: auto;
@@ -60,7 +60,7 @@ header span {
     font-family:"Sofadi One";
     text-align: center;
 }
-.head textarea{
+.head > textarea{
     margin-top: 1rem;
     border: 2px solid purple;
     border-radius: 10px;
@@ -76,7 +76,7 @@ header span {
 }
 .body{
     text-align: center;
-    border: 2px solid gainsboro;
+    border: 2px solid purple;
     margin-left: 5.5em;
     width:75%;
     border-radius: 10px;
@@ -114,7 +114,7 @@ header span {
 
 .output{
   display: flex;
-  border: 2px solid gainsboro;
+  border: 2px solid purple;
   border-radius: 1rem;
   padding: 1rem;
   font-size: clamp(1em, 1.2em, 2em);
@@ -145,6 +145,9 @@ footer{
     body{
         background-color: black;
         color: black;
+    }
+    .head > textarea{
+      color: white;
     }
     .output{
       color: white;
