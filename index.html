@@ -24,13 +24,13 @@
     <main class="main">
       <section class="head">
         <h1>Text To <span>Speech</span> Converter</h1>
-        <textarea name="input" id="input" placeholder="Write anything here"></textarea> <br /><br />
+        <textarea name="input" id="input" placeholder="Write anything here">Hello There👋</textarea> <br /><br />
       </section>
       <section class="body">
         <p class="voices">Voice Gender:
           <input type="radio" id="male" name="gender" value="male">
           <label for="male">Male</label>
-          <input type="radio" id="female" name="gender" value="female">
+          <input type="radio" id="female" name="gender" value="female" checked>
           <label for="female">Female</label>
         </p>
         
@@ -40,7 +40,7 @@
           <label for="slow">Slow</label>
           <input type="radio" id="mslow" name="rate" value="mslow">
           <label for="mslow">Medium-Slow</label>
-          <input type="radio" id="medium" name="rate" value="medium">
+          <input type="radio" id="medium" name="rate" value="medium" checked>
           <label for="medium">Medium</label>
           <input type="radio" id="mfast" name="rate" value="mfast">
           <label for="mfast">Medium-Fast</label>
@@ -51,7 +51,7 @@
         </p>
         
         <p class="volume">Voice Volume:
-          <input type="range" min="1" value="80" max="100" id="volume">
+          <input type="range" min="1" value="70" max="100" id="volume">
         </p>
 
         <p class="language">Select Language:
