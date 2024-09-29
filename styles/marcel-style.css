@@ -16,7 +16,7 @@ html{
 }
 /* \\ VARIABLES */
 :root{
-    --FONT-COLOR : #747070;
+    --FONT-COLOR : #f8f8f8;
    /*  --SPAN-COLOR : rgb(86, 110, 110); */
 }
 
@@ -28,14 +28,14 @@ header{
     margin-left: 12em;
     text-align: center;
     border: 2px solid gray;
-    padding: 1.5rem;
+    padding: 1rem;
     display: block;
     width: 50%;
     border-radius: 15px;
     left: -30px;
-    background-color: rgb(135, 184, 135);
+    background: linear-gradient(to right, purple, violet);
     animation: borderGlow  2s infinite;
-    transition: transform 5s ease-in;
+    transition: transform .5s ease-in;
 }
 header:hover,
 .head > textarea:hover{
@@ -64,14 +64,14 @@ header span {
     margin-top: 1rem;
     border: 2px solid gray;
     border-radius: 10px;
+    padding: 10px;
+    font-size: clamp(1em, 1.2em, 2em);
     animation: borderGlow  2s infinite;
     transition: transform ease-in 3s;
 }
 .head > textarea::placeholder{
   text-align: center;
-  padding: 1.5em;
   font-family: "Sofadi one";
-  font-size: 1.5rem;
 }
 .body{
     text-align: center;
@@ -84,8 +84,8 @@ header span {
 }
 .voices{
     margin-top: 2em;
-    padding: 1.5rem;
-    font-size: 1.5rem;
+    padding: 1rem;
+    font-size: clamp(1em, 1.2em, 2em);
     color: var(--FONT-COLOR);
     font-family:"Sofadi One";
 }
@@ -93,17 +93,17 @@ header span {
 .volume{
     padding: 1rem;
     color: var(--FONT-COLOR);
-    font-size: 1.2rem;
+    font-size: clamp(1em, 1.2em, 2em);
 }
 .language select{ 
     padding: 0.5em;
     color: var(--FONT-COLOR);
-    font-size: 1.2rem;
+    font-size: clamp(1em, 1.2em, 2em);
     margin-bottom: 1rem;
 }
 .language{
     color: var(--FONT-COLOR);
-    font-size: 1.2rem;
+    font-size: clamp(1em, 1.2em, 2em);
 }
 .btn{
    padding: 1em; 
@@ -111,31 +111,31 @@ header span {
    margin-bottom: 1rem;
 }
 
+.output{
+  border: 2px solid gainsboro;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: clamp(1em, 1.2em, 2em);
+  text-align: center;
+  align-self: center
+}
+
 footer{
     text-align: center;
     padding: 0.5em;
     color: var(--FONT-COLOR);
-    font-size: 1.2rem;
+    font-size: clamp(1em, 1.2em, 2em);
     margin-bottom: 1rem;
     
 }
 
 /* \\ KEYFRAMES ANIMATIONS */
 @keyframes borderGlow {
-    0%{
-      border-color: red;
+    from{
+      filter: hue-rotate(0degs);
     }
-    25%{
-        border-color: blue;
-    }
-    50%{
-       border-color: rebeccapurple;
-    }
-    75%{
-        border-color: cyan;
-    }
-    100%{
-        border-color: aqua;
+    to{
+      filter: hue-rotate(360degs);
     }
 }
 
@@ -145,11 +145,17 @@ footer{
         background-color: black;
         color: black;
     }
+    .output{
+      color: white;
+    }
 }
 @media(prefers-color-scheme: light){
     body{
         background-color: floralwhite;
         color: black;
+    }
+    :root{
+      --FONT-COLOR: black;
     }
 }
 @media screen and (max-width : 768px){
@@ -167,12 +173,11 @@ footer{
     }
    
     .head > textarea{
-        margin-top: 1rem;
+       margin-top: 1rem;
        width: 100%;
     }
     header:active,
 .head > textarea:active{
-    transform: scale(1.1);
     box-shadow: 0px 5px 2px rgba(122, 122, 118, 0.5);
 }
     .body{
