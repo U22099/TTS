@@ -7,7 +7,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon-180x180.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="A text to speech converter using web speech syntesis creates by a team of five as a demo project, The team includes MaryJane, Marcel, Muiz, Seyi and Daniel"/>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="../TTS/styles/marcel-style.css"/>
     <title>Text To Speech</title>
   </head>
   <body>
@@ -21,12 +21,14 @@
       <span id="md" class="meridian">AM</span>
     </header>
     <main class="main">
+
       <section class="head">
         <h1>Text To <span>Speech</span> Converter</h1>
-        <textarea name="input" id="input" placeholder="Write anything here">Hello There👋</textarea> <br /><br />
+        <textarea name="input" id="input" placeholder="Write anything here" rows="10" cols="50"></textarea> <br /><br />
       </section>
+      
       <section class="body">
-        <p class="voices">Voice Gender:
+        <p class="voices">Voice Gender: <br>
           <input type="radio" id="male" name="gender" value="male">
           <label for="male">Male</label>
           <input type="radio" id="female" name="gender" value="female" checked>
@@ -34,19 +36,20 @@
         </p>
         
 
-        <p class="rate">Voice Rate:
-          <input type="radio" id="slow" name="rate" value="slow">
+        <p class="rate">Voice Rate: <br>
           <label for="slow">Slow</label>
-          <input type="radio" id="mslow" name="rate" value="mslow">
+          <input type="radio" id="slow" name="rate" value="slow"> <br>
           <label for="mslow">Medium-Slow</label>
-          <input type="radio" id="medium" name="rate" value="medium" checked>
+          <input type="radio" id="mslow" name="rate" value="mslow"> <br>
           <label for="medium">Medium</label>
-          <input type="radio" id="mfast" name="rate" value="mfast">
+          <input type="radio" id="medium" name="rate" value="medium" checked> <br>
           <label for="mfast">Medium-Fast</label>
-          <input type="radio" id="fast" name="rate" value="fast">
+          <input type="radio" id="mfast" name="rate" value="mfast"> <br>
           <label for="fast">Fast</label>
-          <input type="radio" id="vfast" name="rate" value="vfast">
+          <input type="radio" id="fast" name="rate" value="fast"> <br>
           <label for="vfast">Very-Fast</label>
+          <input type="radio" id="vfast" name="rate" value="vfast"> <br>
+          
         </p>
         
         <p class="volume">Voice Volume:
@@ -85,7 +88,7 @@
       <footer>
         <section>
           <h1>Note:</h1>
-          <span>The voice type and voice language depends on your phone and region</span>
+          <span>The voice type and voice language depends on your phone and region</span> <br>
         </section>
         <section>
           <p>developed by MaryJane, Marcel, Seyi, Muiz and Daniel</p>
