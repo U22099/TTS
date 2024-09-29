@@ -35,7 +35,7 @@ export default function Speech(text, options){
     //Speaks the content
     speech.speak(utterance);
     //returns current speech and utternce
-    return {speech, utterance};
+    return { speech, utterance };
   } catch (err){
     //Error handling
     console.log("Speech Synthesis failed with error: ", err);

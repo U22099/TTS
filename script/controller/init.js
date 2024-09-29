@@ -3,10 +3,13 @@ export default class Controller{
   constructor(model, view){
     this.model = model;
     this.view = view;
-    setInterval(() => {
-        this.showTime();
-    }, 1000);
     this.btn = document.getElementById("btn");
+  }
+  
+  init(){
+    setInterval(() => {
+      this.showTime();
+    }, 1000);
     this.btn.addEventListener("click", () => this.run());
   }
   
@@ -27,10 +30,9 @@ export default class Controller{
   getElements(){
     const text = this.view.runGetFromDOM("input");
     const gender = this.view.runGetFromDOM("gender", true);
-    const lang = this.view.runGetFromDOM("lang", true);
+    const rate = this.view.runGetFromDOM("rate", true);
+    const lang = this.view.runGetFromDOM("lang");
     const volume = this.view.runGetFromDOM("volume");
-    const rate = this.view.runGetFromDOM("rate");
-    console.log(text, gender, lang, volume, rate)
     return { text, options: {
       gender, lang, volume, rate
     } }

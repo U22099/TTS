@@ -4,5 +4,5 @@ export default function getFromDOM(input, boolean){
     return document.querySelector(`input[name="${input}"]:checked`)?.value;
   }
   //Returns for other elements
-  return document.getElementById(input)?.value
+  return document.getElementById(input)?.value;
 }

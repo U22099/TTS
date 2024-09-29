@@ -7,3 +7,5 @@ import Controller from "/script/controller/init.js";
 const model = new Model();
 const view = new View();
 const controller = new Controller(model, view);
+
+controller.init();
