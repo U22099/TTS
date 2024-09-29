@@ -16,7 +16,3 @@ export default function Time(){
   //Returns an object with the time values
   return {hour, min, sec, meridian}
 }
-
-setInterval(()=>{
-  //Time();
-}, 1000)

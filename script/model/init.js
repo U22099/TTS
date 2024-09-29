@@ -16,9 +16,11 @@ export default class Model{
     rate: "medium",
     prevSpeech: this.prevSpeech
   }){
-    this.prevSpeech = Speech(text, options);
+    const object = Speech(text, options);
+    this.prevSpeech = object.prevSpeech;
     if(!this.prevSpeech){
       showToast("error", "Error", "An error occured, please try again");
     }
+    return object.utterance;
   }
 }

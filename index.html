@@ -12,15 +12,16 @@
   </head>
   <body>
     <header>
-      <span class="hours">00:</span>
-      <span class="mins">00:</span>
-      <span class="second">00</span>
-      <span class="meridian">&nbsp;AM</span>
+      <span id="hr" class="hours">00:</span>
+      <span id="m" class="mins">00:</span>
+      <span id="s" class="second">00</span>
+      <span>&nbsp;</span>
+      <span id="md" class="meridian">AM</span>
     </header>
     <main class="main">
       <section class="head">
         <h1>Text To <span>Speech</span> Converter</h1>
-        <textarea name="" id="" placeholder="Write anything here"></textarea> <br /><br />
+        <textarea name="input" id="input" placeholder="Write anything here"></textarea> <br /><br />
       </section>
       <section class="body">
         <p class="voices">Voice Gender:
@@ -47,11 +48,11 @@
         </p>
         
         <p class="volume">Voice Volume:
-          <input type="range" min="1" value="80" max="100">
+          <input type="range" min="1" value="80" max="100" id="range">
         </p>
 
         <p class="language">Select Language:
-          <select name="" id="">
+          <select name="" id="lang">
             <option value="en-US">English</option>
             <option value="fr-FR">French</option>
             <option value="es-Es">Spanish</option>
@@ -59,7 +60,10 @@
             <option value="">Portuguese</option>
           </select>
         </p>
-        <button class="btn">Speak</button>
+        <button id="btn" class="btn">Speak</button>
+      </section>
+      <section>
+        <p id="output">Output</p>
       </section>
       <footer>
         <section>
@@ -71,6 +75,6 @@
         </section>
       </footer>
     </main>
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="/main.js" defer></script>
   </body>
 </html>

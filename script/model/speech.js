@@ -1,4 +1,5 @@
 export default function Speech(text, options){
+  console.log("Start");
   //Uses object destructuring to destructure ths options properties
   const {
     gender,
@@ -30,8 +31,8 @@ export default function Speech(text, options){
     if(prevSpeech) prevSpeech.cancel();
     //Speaks the content
     speech.speak(utterance);
-    //returns current speech;
-    return speech;
+    //returns current speech and utternce
+    return {speech, utterance};
   } catch (err){
     //Error handling
     console.log("Speech Synthesis failed with error: ", err);
@@ -63,5 +64,3 @@ function getRate(rate){
       return 1;
   }
 }
-//Testing
-//document.getElementById("btn").addEventListene("click", ()=>Speech("hello world"));
