@@ -27,19 +27,19 @@ header{
     margin: 2em;
     margin-left: 12em;
     text-align: center;
-    border: 2px solid gray;
+    border: 2px solid purple;
     padding: 1rem;
     display: block;
     width: 50%;
     border-radius: 15px;
     left: -30px;
-    background: linear-gradient(to right, purple, violet);
-    animation: borderGlow  2s infinite;
+    background: none;
+    animation: borderGlow  .8s infinite;
     transition: transform .5s ease-in;
 }
 header:hover,
 .head > textarea:hover{
-    transform: scale(1.1);
+    animation: none;
     box-shadow: 0px 5px 2px rgba(122, 122, 118, 0.5);
 }
 header span {
@@ -62,12 +62,13 @@ header span {
 }
 .head textarea{
     margin-top: 1rem;
-    border: 2px solid gray;
+    border: 2px solid purple;
     border-radius: 10px;
     padding: 10px;
+    background: none;
     font-size: clamp(1em, 1.2em, 2em);
-    animation: borderGlow  2s infinite;
-    transition: transform ease-in 3s;
+    animation: borderGlow  .8s infinite;
+    transition: transform ease-in .5s;
 }
 .head > textarea::placeholder{
   text-align: center;
@@ -112,12 +113,15 @@ header span {
 }
 
 .output{
+  display: flex;
   border: 2px solid gainsboro;
   border-radius: 1rem;
   padding: 1rem;
   font-size: clamp(1em, 1.2em, 2em);
   text-align: center;
-  align-self: center
+  margin: 1rem auto;
+  width: fit-content;
+  max-width: 75%;
 }
 
 footer{
@@ -131,10 +135,7 @@ footer{
 
 /* \\ KEYFRAMES ANIMATIONS */
 @keyframes borderGlow {
-    from{
-      filter: hue-rotate(0degs);
-    }
-    to{
+    100%{
       filter: hue-rotate(360degs);
     }
 }
@@ -183,6 +184,10 @@ footer{
     .body{
         margin-left: 3em;
        max-width: 75%;
+    }
+    .output{
+      width: fit-content;
+      max-width: 75%;
     }
     footer{
         margin-left: 3em;
