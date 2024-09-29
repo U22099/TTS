@@ -84,7 +84,7 @@ header span {
     font-family:"Sofadi One";
 }
 .voices{
-    margin-top: 2em;
+    margin-top: 1em;
     padding: 1rem;
     font-size: clamp(1em, 1.2em, 2em);
     color: var(--FONT-COLOR);
