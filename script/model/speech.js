@@ -18,8 +18,8 @@ export default function Speech(text, options){
   const utterance = new SpeechSynthesisUtterance()
   //declaring a varible to hold filtered vouces
   const voice = getVoices(gender, lang, speech);
-  
-  //Checks if voice is present elss leave defailt
+  console.log(voice)
+  //Checks if voice is present else leave default
   if(voice) utterance.voice = voice;
   //Sets volume
   utterance.volume = volume/100;
@@ -44,8 +44,9 @@ export default function Speech(text, options){
 
 function getVoices(gender, lang, speech){
   if(!speech.getVoices()) return false;
+  speech.getVoices().map(x => console.log(x.name, x.lang, x.type, x));
   //Gets voices and filter according to gender and lang input returning the result
-  return speech.getVoices().filter(x => ((x.gender === gender&&x.lang === lang) || x.gender === gender || x.lang === lang || x.name.includes(gender.toUpperCase())))[0];
+  return speech.getVoices().filter(x => ((x.gender === gender&&x.lang === lang) || x.gender === gender || x.lang === lang || x.name.includes(gender.toUpperCase()) || x.name.includes(lang.toUpperCase()) ))[0];
 }
 
 function getRate(rate){
