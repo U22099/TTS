@@ -7,7 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    animation: borderGlow  10s ease infinite;
+    animation: borderGlow  60s ease infinite;
 }
 html{
     width: 800px;
