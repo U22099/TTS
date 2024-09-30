@@ -7,8 +7,7 @@ export default function Speech(text, options){
     gender,
     lang,
     volume,
-    rate,
-    prevSpeech
+    rate
   } = options;
   
   //Initialise a speech synthesiser
@@ -29,12 +28,10 @@ export default function Speech(text, options){
   utterance.text = text;
   
   try{
-    //Cancels any previous speech object
-    if(prevSpeech) prevSpeech.cancel();
     //Speaks the content
     speech.speak(utterance);
-    //returns current speech and utternce
-    return { speech, utterance };
+    //returns utternce
+    return utterance;
   } catch (err){
     //Error handling
     console.log("Speech Synthesis failed with error: ", err);

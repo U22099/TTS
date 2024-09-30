@@ -4,6 +4,7 @@ export default class Controller{
     this.model = model;
     this.view = view;
     this.btn = this.view.runGetElement("btn");
+    this.animBtn = this.view.runGetElement("anim");
   }
   
   init(){
@@ -11,6 +12,7 @@ export default class Controller{
       this.showTime();
     }, 1000);
     this.btn.addEventListener("click", () => this.run());
+    this.animBtn.addEventListener("change", () => this.anim());
   }
   
   showTime(){
@@ -23,6 +25,7 @@ export default class Controller{
   
   run(){
     const { text, options } = this.getElements();
+    this.view.runWriteToDOM("output", "");
     const utterance = this.model.runSpeech(text, options);
     this.streamText(utterance);
   }
@@ -53,5 +56,12 @@ export default class Controller{
   
   stream(text){
     this.view.runWriteToDOM("output", text);
+  }
+  
+  anim(){
+    const isChecked = this.animBtn.checked;
+    const animationState = isChecked ? "borderGlow 60s ease infinite" : "none";
+  
+    document.documentElement.style.setProperty("--anim", animationState);
   }
 }
